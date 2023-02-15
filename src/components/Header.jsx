@@ -41,7 +41,11 @@ const Header = () => {
         <AppBar color="transparent" position="static">
             <Container>
                 <Toolbar>
-                    <Typography className={classes.title} variant='h5' onClick={()=> <Link to={"/"} />} >
+                    <Typography 
+                        className={classes.title}  
+                        variant='h5' 
+                        onClick = {() => {window.location.href = `/`;}} 
+                        >
                         Crypto Oasis
                     </Typography>
                     <Select 

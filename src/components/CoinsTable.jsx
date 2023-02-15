@@ -116,10 +116,10 @@ const CoinsTable = () => {
                   .map((row) => {
                     const profit = row.price_change_percentage_24h > 0;
                     return (
-                      <Link to={`/coins/${row.id}`}>
                       <TableRow
                         className={classes.row}
                         key={row.name}
+                        onClick = {() => {window.location.href = `/coins/${row.id}`;}}
                       >
                         <TableCell
                           component="th"
@@ -173,7 +173,6 @@ const CoinsTable = () => {
                           M
                         </TableCell>
                       </TableRow>
-                      </Link>
                     );
                   })}
               </TableBody>
